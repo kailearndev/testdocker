@@ -1,0 +1,32 @@
+@import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_mixins.scss';
+@import 'sass-rem';
+
+.input_wrapper {
+  text-align: left;
+  flex: 1;
+  .label {
+    display: inline-block;
+    @include rem(
+      (
+        margin-bottom: 6px,
+        margin-top: 10px
+      )
+    );
+    color: $blackBasic;
+    @include title;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(6px);
+    .input {
+      border-radius: rem(5px);
+      background: $greyf3;
+      border: none;
+    }
+    fieldset {
+      border-color: transparent;
+    }
+  }
+}

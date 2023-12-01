@@ -1,0 +1,22 @@
+@import "sass-rem";
+@import "../../assets/scss/_variables.scss";
+
+.header {
+  background-color: $blackBasic;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  height: rem(100px);
+  ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    li {
+      list-style: none;
+      a {
+        color: $whiteBasic;
+      }
+    }
+  }
+}

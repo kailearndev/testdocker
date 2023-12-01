@@ -1,0 +1,14 @@
+@import "sass-rem";
+@import "../../assets/scss/_variables.scss";
+
+.footer {
+  height: rem(100px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $blackBasic;
+  width: 100%;
+  color: white;
+  font-size: rem(20px);
+  text-align: center;
+}

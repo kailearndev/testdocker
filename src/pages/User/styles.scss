@@ -1,0 +1,60 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/_mixins.scss";
+@import "sass-rem";
+
+.sign_in {
+  width: 100%;
+  height: 100%;
+  @include flex-center-column;
+  .bottom_signup {
+    text-align: right;
+    a {
+      margin-left: 10px;
+      @include title;
+    }
+  }
+  .icon {
+    color: black;
+  }
+  .form {
+    width: rem(440px);
+  }
+  .title_signin {
+    color: $blackBasic;
+    @include headerLabel;
+    margin-bottom: rem(20px);
+  }
+  .title_signup {
+    @include headerLabel;
+    margin-bottom: rem(7px);
+  }
+  .button_signup {
+    @include title;
+    font-weight: 700;
+    color: $grey3c;
+    align-self: stretch;
+    width: rem(100px);
+    border: rem(1px solid $grey3c);
+    background: $blackBasic;
+  }
+  .group_buttons {
+    display: flex;
+    @include rem(
+      (
+        gap: 4px,
+        margin-top: 30px,
+      )
+    );
+    .btn_left {
+      background: $greyf3;
+      color: $black24;
+    }
+    .btn_right {
+      background: $blackBasic;
+      color: $whiteBasic;
+    }
+  }
+  .signin_button {
+    margin-top: rem(30px);
+  }
+}

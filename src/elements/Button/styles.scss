@@ -1,0 +1,45 @@
+@import '../../assets/scss/_variables.scss';
+@import 'sass-rem';
+
+.button {
+  width: 100%;
+  @include rem(
+    (
+      height: 45px,
+      border-radius: 5px,
+      font-size: 15px
+    )
+  );
+  font-weight: 700;
+  background-color: $blackBasic;
+  cursor: pointer;
+}
+
+.button_outline {
+  @extend .button;
+  color: $blackBasic;
+  background-color: transparent;
+  border: rem(1px solid inherit);
+  &:disabled {
+    color: $blackBasic;
+    border-color: inherit;
+  }
+}
+
+.button_standard {
+  @extend .button;
+  border: none;
+  color: $whiteBasic;
+  &:disabled {
+    color: $whiteBasic;
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.button_standard_light {
+  @extend .button;
+  border: none;
+  color: $blackBasic;
+  background-color: $greyf3;
+}

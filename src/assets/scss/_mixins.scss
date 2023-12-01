@@ -1,0 +1,142 @@
+@import "./variables";
+@import "sass-rem";
+
+// Breakpoints
+@mixin smMinBreakPoint {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin mdMinBreakPoint {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lgMinBreakPoint {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xlMinBreakPoint {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin xxlMinBreakPoint {
+  @media (min-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin customMinBreakPoint($size) {
+  @media (min-width: $size+"px") {
+    @content;
+  }
+}
+
+@mixin customMaxBreakPoint($size) {
+  @media (max-width: $size + "px") {
+    @content;
+  }
+}
+
+@mixin flex-row-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin title {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  @include rem(
+    (
+      font-size: 12px,
+      line-height: 17px,
+    )
+  );
+  font-weight: 400;
+  color: $black24;
+}
+
+@mixin headerLabel {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 30px,
+      line-height: 43px,
+    )
+  );
+}
+
+@mixin logoLabel {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 18px,
+      line-height: 26px,
+    )
+  );
+}
+
+@mixin descriptionLabel {
+  font-style: normal;
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 14px,
+      line-height: 20px,
+    )
+  );
+}
+
+@mixin titleLabel {
+  font-style: normal;
+  font-weight: bold;
+  @include rem(
+    (
+      font-size: 20px,
+      line-height: 29px,
+    )
+  );
+}
+
+@mixin bodyLabelPopUp {
+  font-style: normal;
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 12px,
+      line-height: 17px,
+    )
+  );
+}
